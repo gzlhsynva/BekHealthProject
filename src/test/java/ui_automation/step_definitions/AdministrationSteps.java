@@ -1,12 +1,10 @@
 package ui_automation.step_definitions;
 
-import io.cucumber.java.en.*;
+import com.github.javafaker.Faker;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.Select;
 import ui_automation.pages.AdministrationPage;
 import ui_automation.pages.GalileoPage;
-
-import javax.swing.*;
 
 public class AdministrationSteps {
 
@@ -27,9 +25,12 @@ public class AdministrationSteps {
         String num = "12345";
         String text = "QAtesting";
         String email ="qatesting@mail.com";
+        Faker faker = new Faker();
+        faker.address().fullAddress();
 
         if(subtabs.equals("Authentication")){
-            Thread.sleep(1000);
+
+            Thread.sleep(2000);
             administrationPage.addUserBtn.click();
             Thread.sleep(1000);
             administrationPage.emailInput.sendKeys(email);
@@ -40,8 +41,12 @@ public class AdministrationSteps {
             administrationPage.checkBox2.click();
             administrationPage.checkBox3.click();
             administrationPage.checkBox4.click();
+            administrationPage.checkBox5.click();
+            administrationPage.checkBox8.click();
+            administrationPage.checkBox11.click();
+            administrationPage.checkBox12.click();
             administrationPage.submitBtn.click();
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             administrationPage.deleteUser.click();
             Thread.sleep(2000);
             Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains(email));
@@ -56,12 +61,12 @@ public class AdministrationSteps {
             Thread.sleep(1000);
             administrationPage.siteName.sendKeys(text);
             administrationPage.siteID.sendKeys(num);
-            administrationPage.addressLine1.sendKeys(text);
-            administrationPage.addressLine2.sendKeys(text);
-            administrationPage.city.sendKeys(text);
-            administrationPage.zipcode.sendKeys(num);
-            administrationPage.state.sendKeys(text);
-            administrationPage.country.sendKeys(text);
+            administrationPage.addressLine1.sendKeys("<script>alert(document.domain)</script>");
+            administrationPage.addressLine2.sendKeys("<script>alert(document.domain)</script>");
+            administrationPage.city.sendKeys("Boston");
+            administrationPage.zipcode.sendKeys("01566");
+            administrationPage.state.sendKeys("MA");
+            administrationPage.country.sendKeys("USA");
             administrationPage.firstName.sendKeys(text);
             administrationPage.lastName.sendKeys(text);
             administrationPage.email.sendKeys(email);
@@ -71,12 +76,18 @@ public class AdministrationSteps {
             administrationPage.selectUsers.click();
             Thread.sleep(4000);
             administrationPage.userSelect.click();
+            Thread.sleep(1000);
+            administrationPage.userSelect32.click();
+            Thread.sleep(1000);
+            administrationPage.userSelect3.click();
+            Thread.sleep(1000);
+            administrationPage.userSelect4.click();
             Thread.sleep(3000);
             administrationPage.getOutOfDropdown.click();
             administrationPage.getOutOfDropdown.click();
             Thread.sleep(2000);
             administrationPage.submitBtn2.click();
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             administrationPage.deleteBtn2.click();
             Thread.sleep(2000);
             Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains(text));
@@ -97,6 +108,10 @@ public class AdministrationSteps {
             administrationPage.usersGroups.click();
             Thread.sleep(4000);
             administrationPage.userSelect2.click();
+            Thread.sleep(1000);
+            administrationPage.userSelect23.click();
+            Thread.sleep(1000);
+            administrationPage.userSelect24.click();
             Thread.sleep(4000);
             administrationPage.getOutOfDropdown.click();
             administrationPage.getOutOfDropdown.click();

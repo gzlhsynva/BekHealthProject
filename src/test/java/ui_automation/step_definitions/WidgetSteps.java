@@ -1,6 +1,6 @@
 package ui_automation.step_definitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import ui_automation.pages.DomainPage;
 import ui_automation.pages.GalileoPage;
@@ -21,9 +21,9 @@ public class WidgetSteps {
     @Then("user clicks {string} page and verifies the text in page")
     public void user_clicks_page_and_verifies_the_text_in_page(String widget) {
        String expectedGalileoText ="Galileo";
-        String expectedReportingText ="Patient Attrition:";
         String expectedAutoRecruiterText ="Trial Portfolio";
         String expectedAdministrationText ="User Management";
+
 
        if(widget.equals("Galileo")) {
            galileoPage.galileoBtn.click();
@@ -31,8 +31,8 @@ public class WidgetSteps {
            Assert.assertEquals("Galileo text not found!", expectedGalileoText, actualGalileoText);
        }else if(widget.equals("Reporting")){
            widgetPage.reportingWidget.click();
-           String actualReportingText = widgetPage.reportingText.getText();
-           Assert.assertEquals("Reporting text not found!", expectedReportingText, actualReportingText);
+           String actualAutoRecruiterText = widgetPage.autoRecruiterText.getText();
+           Assert.assertEquals("Reporting text not found!", expectedAutoRecruiterText, actualAutoRecruiterText);
        }else if(widget.equals("Auto Recruiter")){
            widgetPage.autoRecruiterWidget.click();
            String actualAutoRecruiterText = widgetPage.autoRecruiterText.getText();

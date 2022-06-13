@@ -68,7 +68,7 @@ public class DomainPage {
     @FindBy(xpath = "//*[text()='Procedures']")
     public WebElement proceduresDropdown;
 
-    @FindBy(xpath = "(//*[contains(text(),'Infectious and parasitic diseases [ICD10: A00-B99]')])[2]")
+    @FindBy(xpath = "(//*[contains(text(),'Certain infectious and parasitic diseases [ICD10: A00-B99]')])[2]")
     public WebElement diagnosisTab1;
 
     @FindBy(xpath = "(//*[contains(text(),'Diseases of the respiratory system [ICD10: J00-J99]')])[2]")

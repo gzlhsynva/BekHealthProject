@@ -22,6 +22,5 @@ Feature: This feature file tests Galileo Page functionality
   Scenario: user validates Galileo Page patients in trial functionality
     Given user enter valid credentials and clicks on login button
     When user navigates to Galileo Page
-    Then user adds a new trial
-    Then user clicks the show patients in trial button
+    Then user clicks the show patients in trial button and adds a new trial
     And user verifies the trial functionalities and returns back

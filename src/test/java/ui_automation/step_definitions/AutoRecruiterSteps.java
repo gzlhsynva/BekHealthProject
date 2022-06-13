@@ -1,8 +1,8 @@
 package ui_automation.step_definitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import ui_automation.pages.AutoRecruiterPage;
 import ui_automation.pages.GalileoPage;
 import ui_automation.utilities.Driver;
@@ -40,6 +40,14 @@ public class AutoRecruiterSteps {
         Thread.sleep(1000);
         autoRecruiterPage.lineOfTherapy.sendKeys(text);
         Thread.sleep(1000);
+        autoRecruiterPage.calendar.click();
+        Thread.sleep(2000);
+        autoRecruiterPage.calendarDaySelect.click();
+        Thread.sleep(1000);
+        autoRecruiterPage.RBSStatusBtn.click();
+        Thread.sleep(1000);
+        autoRecruiterPage.RBSStatusBtnSelect.click();
+        Thread.sleep(1000);
         autoRecruiterPage.criteriaBtn.click();
         Thread.sleep(1000);
         autoRecruiterPage.criteriaLabel.sendKeys(text);
@@ -49,29 +57,43 @@ public class AutoRecruiterSteps {
         autoRecruiterPage.inclusionOptionText.sendKeys(text);
         Thread.sleep(1000);
         autoRecruiterPage.exclusionOptionBtn.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         autoRecruiterPage.exclusionOptionText.sendKeys(text);
         Thread.sleep(1000);
-        autoRecruiterPage.pstQueryBtn.sendKeys(text);
+        autoRecruiterPage.pstQueryBtn.click();
+        Thread.sleep(2000);
+        autoRecruiterPage.pstQueryOptionSelect1.click();
         Thread.sleep(1000);
-        autoRecruiterPage.nullPSTQueryBtn.sendKeys(text);
+        autoRecruiterPage.pstQueryOptionSelect2.click();
         Thread.sleep(1000);
+//        autoRecruiterPage.nullPSTQueryBtn.click();
+//        Thread.sleep(1000);
+//        autoRecruiterPage.nullPstQueryOptionSelect1.click();
+//        Thread.sleep(5000);
+//        autoRecruiterPage.nullPstQueryOptionSelect2.click();
+//        Thread.sleep(2000);
         autoRecruiterPage.submitBtn.click();
 
     }
 
-    @Then("user deletes the trial")
-    public void user_deletes_the_trial() throws InterruptedException {
-        String text = "QA testing";
-        Thread.sleep(2000);
-        autoRecruiterPage.deleteBtn.click();
-        Thread.sleep(1000);
-        String deleteTextMessage = galileoPage.deleteTextConfirm.getText();
-        Assert.assertTrue(deleteTextMessage.contains(text));
-        Thread.sleep(1000);
-        autoRecruiterPage.okDeleteBtn.click();
-        Thread.sleep(2000);
+    @Then("user confirms that the trial was not created")
+    public void user_confirms_that_the_trial_was_not_created() {
+       Assert.assertTrue(autoRecruiterPage.errorMessage.isDisplayed());
+
     }
+
+//    @Then("user deletes the trial")
+//    public void user_deletes_the_trial() throws InterruptedException {
+//        String text = "QA testing";
+//        Thread.sleep(2000);
+//        autoRecruiterPage.deleteBtn.click();
+//        Thread.sleep(1000);
+//        String deleteTextMessage = galileoPage.deleteTextConfirm.getText();
+//        Assert.assertTrue(deleteTextMessage.contains(text));
+//        Thread.sleep(1000);
+//        autoRecruiterPage.okDeleteBtn.click();
+//        Thread.sleep(2000);
+//    }
 
     @When("user clicks Auto Recruiter page from navigation")
     public void user_clicks_Auto_Recruiter_page_from_navigation() throws InterruptedException {
@@ -98,16 +120,16 @@ public class AutoRecruiterSteps {
     @Then("user clicks on a patient and verifies their data")
     public void user_clicks_on_a_patient_and_verifies_their_data() throws InterruptedException {
         String patientName = autoRecruiterPage.patientFromTable.getText();
+        Thread.sleep(2000);
         String patientProvider = autoRecruiterPage.patientFromTableProvider.getText();
         autoRecruiterPage.patientFromTable.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         Assert.assertTrue(autoRecruiterPage.pageTitleVerification.getText().contains(patientName));
         Thread.sleep(1000);
         Assert.assertTrue(autoRecruiterPage.patientProviderFromDetails.getText().contains(patientProvider));
 
         String actualUrl = Driver.getInstance().getDriver().getCurrentUrl();
-        String expectedUrl = "https://development.bekhealth.com/#/auto-recruiter/prescreen/UGF0aWVudDo2MDAwN2RhYzQ3OTkyMzFmYTM5MWIzZWM=/undefined";
-        Assert.assertEquals(expectedUrl,actualUrl);
+        Assert.assertTrue(actualUrl.contains("auto-recruiter/prescreen"));
 
     }
 

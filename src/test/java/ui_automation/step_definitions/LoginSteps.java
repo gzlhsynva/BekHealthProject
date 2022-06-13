@@ -1,6 +1,7 @@
 package ui_automation.step_definitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import ui_automation.pages.LoginPage;
 import ui_automation.utilities.ConfigurationReader;
@@ -72,7 +73,10 @@ public class LoginSteps {
         loginPage.login();
     }
 
-
+    @When("user enter valid user credentials and clicks on login button")
+    public void user_enter_valid_user_credentials_and_clicks_on_login_button() {
+        loginPage.userLogin();
+    }
 
 
 

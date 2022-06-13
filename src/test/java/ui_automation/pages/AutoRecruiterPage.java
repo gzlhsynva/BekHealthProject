@@ -48,10 +48,16 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "(//input[@class='el-input__inner'])[12]")
     public WebElement lineOfTherapy;
 
+    @FindBy(xpath = "(//input[@class='el-input__inner'])[14]")
+    public WebElement RBSStatusBtn;
+
+    @FindBy(xpath = "//span[text()='IRB Status Approved']")
+    public WebElement RBSStatusBtnSelect;
+
     @FindBy(xpath = "//i[@class='el-icon-circle-plus']")
     public WebElement criteriaBtn;
 
-    @FindBy(xpath = "(//input[@class='el-input__inner'])[13]")
+    @FindBy(xpath = "(//input[@class='el-input__inner'])[15]")
     public WebElement criteriaLabel;
 
     @FindBy(xpath = "(//i[@class='el-icon-circle-plus'])[2]")
@@ -60,16 +66,16 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "(//i[@class='el-icon-circle-plus'])[3]")
     public WebElement exclusionOptionBtn;
 
-    @FindBy(xpath = "(//input[@class='el-input__inner'])[14]")
+    @FindBy(xpath = "(//input[@class='el-input__inner'])[16]")
     public WebElement inclusionOptionText;
 
-    @FindBy(xpath = "(//input[@class='el-input__inner'])[15]")
+    @FindBy(xpath = "(//input[@class='el-input__inner'])[17]")
     public WebElement exclusionOptionText;
 
-    @FindBy(xpath = "(//input[@class='el-input__inner'])[16]")
+    @FindBy(xpath = "(//input[@class='el-input__inner'])[18]")
     public WebElement pstQueryBtn;
 
-    @FindBy(xpath = "(//input[@class='el-input__inner'])[17]")
+    @FindBy(xpath = "(//input[@class='el-input__inner'])[19]")
     public WebElement nullPSTQueryBtn;
 
     @FindBy(xpath = "(//input[@placeholder='Select'][@class='el-input__inner'])[3]")
@@ -81,7 +87,7 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "//span[text()='Submit']")
     public WebElement submitBtn;
 
-    @FindBy(xpath = "(//button[@class='el-button el-button--danger el-button--mini']//span[text()='Delete'])[17]")
+    @FindBy(xpath = "(//button[@class='el-button el-button--danger el-button--mini']//span[text()='Delete'])[7]")
     public WebElement deleteBtn;
 
     @FindBy(xpath = "//span[contains(text(),'OK')]")
@@ -108,16 +114,16 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "//h1[text()='Inactive Patients']")
     public WebElement inactivePatientsText;
 
-    @FindBy(xpath = "//div[@class='el-card__body']//tr[7]//td[2]")
+    @FindBy(xpath = "//div[@class='el-card__body']//tr[5]//td[2]")
     public WebElement patientFromTable;
 
-    @FindBy(xpath = "//h1[text()='Patient: Amy Wang Mitchell']")
+    @FindBy(xpath = "//div[@class='title']")
     public WebElement pageTitleVerification;
 
-    @FindBy(xpath = "//div[@class='el-card__body']//tr[7]//td[3]")
+    @FindBy(xpath = "//div[@class='el-card__body']//tr[5]//td[3]/*/*")
     public WebElement patientFromTableProvider;
 
-    @FindBy(xpath = "//*[text()='David Obrien']")
+    @FindBy(xpath = "(//div[@class='cell'])[20]")
     public WebElement patientProviderFromDetails;
 
     @FindBy(xpath = "//*[@class='el-switch__core']")
@@ -132,13 +138,26 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "//*[text()='Inactive']")
     public WebElement inactiveText;
 
+    @FindBy(xpath = "(//input[@class='el-input__inner'][@type='text'])[13]")
+    public WebElement calendar;
 
+    @FindBy(xpath = "//span[contains(text(),'15')]")
+    public WebElement calendarDaySelect;
 
+    @FindBy(xpath = " (//*[text()=' BEK Testing Library '])[2]")
+    public WebElement pstQueryOptionSelect1;
 
+    @FindBy(xpath = "//span[text()= ' Active in past 4 years ']")
+    public WebElement pstQueryOptionSelect2;
 
+    @FindBy(xpath = "//li[@class='el-select-dropdown__item hover']")
+    public WebElement nullPstQueryOptionSelect2;
 
+    @FindBy(xpath = "(//b[text()= ' BEKHealth - Internal Training '])[2]")
+    public WebElement nullPstQueryOptionSelect1;
 
-
+    @FindBy(xpath = "//div[@class='el-message el-message--error']")
+    public WebElement errorMessage;
 
 
 

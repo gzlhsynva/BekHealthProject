@@ -1,8 +1,5 @@
 package ui_automation.pages;
 
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,7 +35,7 @@ public class GalileoPage {
     @FindBy(xpath = "(//*[contains(text(),'Add')])[3]")
     public WebElement addSex;
 
-        @FindBy(xpath = "//*[text()='Custom facet']")
+        @FindBy(xpath = "//*[text()='Custom Facet']")
     public WebElement customfacetBtn;
 
         @FindBy(xpath = "(//*[contains(text(),'Add')])[8]")
@@ -56,11 +53,14 @@ public class GalileoPage {
         @FindBy(xpath = "(//*[@class='el-input__inner'])[15]")
     public WebElement descriptionBtn;
 
-        @FindBy(xpath = "(//*[@class='el-input__inner'])[16]")
+        @FindBy(xpath = "(//input[@class='el-input__inner'])[16]")
     public WebElement parentFolderBtn;
 
-        @FindBy(xpath = "//*[contains(text(),'BEK Testing Library')]")
-    public WebElement bekTestingOption;
+        @FindBy(xpath = "//span[@class='expanded el-tree-node__expand-icon el-icon-caret-right']")
+    public WebElement folderClick;
+
+    @FindBy(xpath = "//span[text()='Morgan Smith sandbox']/..")
+    public WebElement folderClick2;
 
         @FindBy(xpath = "//*[text()=' Submit ']")
     public WebElement submitBtn;
@@ -89,13 +89,13 @@ public class GalileoPage {
       @FindBy(xpath = "(//*[contains(text(),'Saved Trials and Criteria')])[2]")
     public WebElement savedTrialsAndCriteriaBtn;
 
-          @FindBy(xpath = "//*[contains(text(),'BEK Testing Library')]/..//*[@class='el-icon-arrow-right']")
+          @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[38]")
     public WebElement bekTestingLibraryDropdown;
 
-      @FindBy(xpath = "//*[text()='QA testing']")
-    public WebElement textValidation;
+      @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[39]")
+    public WebElement sandbox;
 
-          @FindBy(xpath = "(//span[text()=' Delete '])[487]")
+          @FindBy(xpath = "(//span[text()=' Delete '])[608]")
     public WebElement deleteBtn;
 
     @FindBy(xpath = "//div[@class='el-message-box__message']")
@@ -107,7 +107,7 @@ public class GalileoPage {
     @FindBy(xpath = "//input[@placeholder='Type to search trials and criteria']")
     public WebElement searchBtn;
 
-    @FindBy(xpath = "//a[text()=' QA test ']")
+    @FindBy(xpath = "//a[text()=' some cohort ']")
     public WebElement searchedTextVerification;
 
     @FindBy(xpath = "(//*[contains(text(),'Add')])[4]")
@@ -130,8 +130,18 @@ public class GalileoPage {
 
     @FindBy(xpath = "//span[(text()='Galileo')]")
     public WebElement galileoTitle;
-//
-//    @FindBy(xpath = "")
-//    public WebElement ;
+
+    @FindBy(xpath = "//span[text()='some folder']")
+    public WebElement somefolderBtn;
+
+
+    @FindBy(xpath = " (//i[@class='el-icon-arrow-right'])[33]")
+    public WebElement folderDropdown;
+
+    @FindBy(xpath = " (//i[@class='el-icon-arrow-right'])[34]")
+    public WebElement folderDropdown2;
+
+    @FindBy(xpath = " //span[text()='BEK Testing Library']")
+    public WebElement BEKtestingBtn;
 
 }

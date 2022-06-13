@@ -31,24 +31,15 @@ public class LoginPage {
 
 
 
-
-//    @FindBy(xpath = "")
-//    public WebElement ;
-
-//    @FindBy(xpath = "")
-//    public WebElement ;
-
-//    @FindBy(xpath = "")
-//    public WebElement ;
-
-
-
-
-
-
     public void login(){
         usernameTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealth.username"));
         passwordTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealth.password"));
+        signInBtn.click();
+    }
+
+    public void userLogin(){
+        usernameTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealthDev.username"));
+        passwordTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealthDev.password"));
         signInBtn.click();
     }
 

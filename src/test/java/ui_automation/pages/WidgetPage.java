@@ -36,13 +36,13 @@ public class WidgetPage {
         @FindBy(xpath = "//span[text()='User Management']")
     public WebElement administrationText;
 
-    //    @FindBy(xpath = "")
-//    public WebElement ;
+        @FindBy(xpath = "//span[text()='Select Your Report']")
+    public WebElement selectYourReportWidget;
 
-    //    @FindBy(xpath = "")
-//    public WebElement ;
+        @FindBy(xpath = "//h1[text()='Select a Trial']")
+    public WebElement selectOperationalReportText;
 
-    //    @FindBy(xpath = "")
-//    public WebElement ;
+        @FindBy(xpath = "//span[text()='Operational Report']")
+    public WebElement operationalReportDropdown;
 
 }

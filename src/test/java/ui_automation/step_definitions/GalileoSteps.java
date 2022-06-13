@@ -1,9 +1,8 @@
 package ui_automation.step_definitions;
 
-import com.github.javafaker.Faker;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +20,8 @@ public class GalileoSteps {
     GalileoPage galileoPage = new GalileoPage();
 
     @When("user navigates to Galileo Page")
-    public void user_navigates_to_Galileo_Page() {
+    public void user_navigates_to_Galileo_Page() throws InterruptedException {
+        Thread.sleep(1000);
     galileoPage.menuBtn.click();
     galileoPage.galileoBtn.click();
     }
@@ -59,17 +59,22 @@ public class GalileoSteps {
         galileoPage.saveBtn.click();
         galileoPage.titleBtn.sendKeys(text);
         galileoPage.descriptionBtn.sendKeys(text);
+        Thread.sleep(5000);
         galileoPage.parentFolderBtn.click();
-        galileoPage.bekTestingOption.click();
+        Thread.sleep(1000);
+        galileoPage.folderClick.click();
+        Thread.sleep(1000);
+        galileoPage.folderClick2.click();
+        Thread.sleep(1000);
         galileoPage.submitBtn.click();
         Thread.sleep(1000);
         galileoPage.savedTrialsAndCriteriaBtn.click();
         Thread.sleep(3000);
         galileoPage.bekTestingLibraryDropdown.click();
         Thread.sleep(3000);
-        String actualText = galileoPage.textValidation.getText();
-        Assert.assertTrue(actualText.contains(text));
+        galileoPage.sandbox.click();
         Thread.sleep(2000);
+
         galileoPage.deleteBtn.click();
         Thread.sleep(2000);
         String deleteTextMessage = galileoPage.deleteTextConfirm.getText();
@@ -89,7 +94,7 @@ public class GalileoSteps {
 
     @Then("user uses the search button and verifies the result")
     public void user_uses_the_search_button_and_verifies_the_result() throws InterruptedException {
-        String text = "QA test";
+        String text = "some cohort";
         WebElement search = galileoPage.searchBtn;
         search.sendKeys(text);
         search.sendKeys(Keys.ENTER);
@@ -99,25 +104,22 @@ public class GalileoSteps {
         Thread.sleep(1000);
     }
 
-    @Then("user adds a new trial")
-    public void user_adds_a_new_trial() {
-    galileoPage.trialAdd.click();
-    }
 
-    @Then("user clicks the show patients in trial button")
-    public void user_clicks_the_show_patients_in_trial_button() {
+    @Then("user clicks the show patients in trial button and adds a new trial")
+    public void user_clicks_the_show_patients_in_trial_button_and_adds_a_new_trial() throws InterruptedException {
         galileoPage.showPatientsInTrialBtn.click();
-    }
-
-    @Then("user verifies the trial functionalities and returns back")
-    public void user_verifies_the_trial_functionalities_and_returns_back() throws InterruptedException {
-
         galileoPage.trialCriteriaOptionsBtn.click();
         galileoPage.demographicsBtn.click();
         Thread.sleep(2000);
         galileoPage.addAge.click();
         Thread.sleep(2000);
         galileoPage.addSex.click();
+    }
+
+    @Then("user verifies the trial functionalities and returns back")
+    public void user_verifies_the_trial_functionalities_and_returns_back() throws InterruptedException {
+
+
         Thread.sleep(4000);
         Assert.assertTrue(galileoPage.tableTitle1.getText().contains("Patient ID"));
         Assert.assertTrue(galileoPage.tableTitle2.getText().contains("Age"));
@@ -127,7 +129,10 @@ public class GalileoSteps {
         Assert.assertTrue(galileoPage.galileoTitle.getText().contains("Galileo"));
     }
 
-
+    @Then("user validates Galileo Page")
+    public void user_validates_Galileo_Page() {
+        Assert.assertTrue(galileoPage.galileoTitle.isDisplayed());
+    }
 
 
 

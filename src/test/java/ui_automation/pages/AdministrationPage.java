@@ -45,6 +45,18 @@ public class AdministrationPage {
     @FindBy(xpath = "(//span[@class='el-checkbox__inner'])[4]")
     public WebElement checkBox4;
 
+    @FindBy(xpath = "(//span[@class='el-checkbox__inner'])[5]")
+    public WebElement checkBox5;
+
+    @FindBy(xpath = "(//span[@class='el-checkbox__inner'])[8]")
+    public WebElement checkBox8;
+
+    @FindBy(xpath = "(//span[@class='el-checkbox__inner'])[11]")
+    public WebElement checkBox11;
+
+    @FindBy(xpath = "(//span[@class='el-checkbox__inner'])[12]")
+    public WebElement checkBox12;
+
     @FindBy(xpath = "//span[text()='Submit']")
     public WebElement submitBtn;
 
@@ -54,7 +66,7 @@ public class AdministrationPage {
     @FindBy(xpath = "(//span[@class='el-radio__inner'])[3]")
     public WebElement PHIaccessChanger;
 
-    @FindBy(xpath = "(//span[text()='Delete'])[43]")
+    @FindBy(xpath = "(//span[text()='Delete'])[66]")
     public WebElement deleteUser;
 
     @FindBy(xpath = "//span[contains(text(),'Confirm')]")
@@ -111,17 +123,32 @@ public class AdministrationPage {
     @FindBy(xpath = "(//*[@class='el-select__caret el-input__icon el-icon-arrow-up'])[3]")
     public WebElement selectUsers;
 
-    @FindBy(xpath = "(//li[@class='el-select-dropdown__item'])[32]")
+    @FindBy(xpath = "(//li[@class='el-select-dropdown__item'])[26]")
     public WebElement userSelect;
 
-    @FindBy(xpath = "(//li[@class='el-select-dropdown__item aqa-users-groups-option'])[37]")
+    @FindBy(xpath = "(//li[@class='el-select-dropdown__item'])[27]")
+    public WebElement userSelect32;
+
+    @FindBy(xpath = "(//li[@class='el-select-dropdown__item'])[28]")
+    public WebElement userSelect3;
+
+    @FindBy(xpath = "(//li[@class='el-select-dropdown__item'])[29]")
+    public WebElement userSelect4;
+
+    @FindBy(xpath = "//span[contains(text(),'ghuseynova')]")
     public WebElement userSelect2;
+
+    @FindBy(xpath = "//span[contains(text(),'amordasov')]")
+    public WebElement userSelect23;
+
+    @FindBy(xpath = "//span[contains(text(),'bstrahan')]")
+    public WebElement userSelect24;
 
     @FindBy(xpath = "(//input[@class='el-select__input'])[1]")
     public WebElement getOutOfDropdown;
 
 
-    @FindBy(xpath = "(//span[contains(text(),'Delete')])[6]")
+    @FindBy(xpath = "(//span[contains(text(),'Delete')])[5]")
     public WebElement deleteBtn2;
 
     @FindBy(xpath = "//span[text()='Trial Groups']")
@@ -139,7 +166,7 @@ public class AdministrationPage {
     @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[3]")
     public WebElement usersGroups;
 
-    @FindBy(xpath = "(//span[text()='Delete'])[10]")
+    @FindBy(xpath = "(//span[text()='Delete'])[11]")
     public WebElement delete3;
 
 //    @FindBy(xpath = "//span[contains(text(),'Submit')]")
