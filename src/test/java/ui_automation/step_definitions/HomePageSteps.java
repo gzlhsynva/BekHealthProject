@@ -68,13 +68,15 @@ public class HomePageSteps {
         homePage.sortPrimaryProviderFilter.click();
         Thread.sleep(3000);
         homePage.sortFilteroption1.click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
+        homePage.clickOff.click();
+        Thread.sleep(2000);
         homePage.filterByProvider.click();
         Thread.sleep(2000);
         homePage.sortFilteroption1.click();
         Thread.sleep(2000);
-        homePage.sortFilteroption3.click();
-        Thread.sleep(2000);
+//        homePage.sortFilteroption3.click();
+//        Thread.sleep(2000);
         homePage.filtersBtn.click();
         Thread.sleep(2000);
         Assert.assertTrue(homePage.tableName1.getText().contains("Brian Rogers"));

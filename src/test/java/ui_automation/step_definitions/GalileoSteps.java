@@ -64,17 +64,16 @@ public class GalileoSteps {
         Thread.sleep(1000);
         galileoPage.folderClick.click();
         Thread.sleep(1000);
-        galileoPage.folderClick2.click();
-        Thread.sleep(1000);
+//        galileoPage.folderClick2.click();
+//        Thread.sleep(1000);
         galileoPage.submitBtn.click();
         Thread.sleep(1000);
         galileoPage.savedTrialsAndCriteriaBtn.click();
         Thread.sleep(3000);
         galileoPage.bekTestingLibraryDropdown.click();
         Thread.sleep(3000);
-        galileoPage.sandbox.click();
-        Thread.sleep(2000);
-
+//        galileoPage.sandbox.click();
+//        Thread.sleep(2000);
         galileoPage.deleteBtn.click();
         Thread.sleep(2000);
         String deleteTextMessage = galileoPage.deleteTextConfirm.getText();

@@ -50,7 +50,7 @@ public class HomePage {
     @FindBy(xpath = "//input[@placeholder='Sort by Name']")
     public WebElement sortNameFilter;
 
-    @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[11]//li[2]")
+    @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[8]//li[2]")
     public WebElement sortFilteroption2;
 
     @FindBy(xpath = "//input[@placeholder='Filter by Site Name']")
@@ -59,10 +59,10 @@ public class HomePage {
     @FindBy(xpath = "//input[@placeholder='Filter by Criteria']")
     public WebElement sortCriteriaFilter;
 
-    @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[11]//li[1]")
+    @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[8]//li[1]")
     public WebElement sortFilteroption1;
 
-    @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[10]")
+    @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[7]")
     public WebElement sortPrimaryProviderFilter;
 
     @FindBy(xpath = "//div[@class='el-tabs__content']//td[2]/*/*/*/*")
@@ -72,13 +72,13 @@ public class HomePage {
     @FindBy(xpath = "//span[@class='el-table__empty-text']")
     public WebElement emptyTable;
 
-        @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[11]")
+        @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[8]")
     public WebElement filterByProvider;
 
-        @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[11]//li[3]")
+        @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[8]//li[3]")
     public WebElement sortFilteroption3;
 
-    //    @FindBy(xpath = "")
-//    public WebElement ;
+        @FindBy(xpath = "//h4[text()='Primary Provider']")
+    public WebElement clickOff;
 
 }

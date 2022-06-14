@@ -91,8 +91,8 @@ public class SelectYourReportSteps {
             Thread.sleep(2000);
             selectYourReportPage.operationalPerformanceDropdown.click();
             Thread.sleep(1000);
-            Assert.assertTrue(selectYourReportPage.chartHeader2.getText().contains("Disqualification"));
-            Assert.assertTrue(selectYourReportPage.chartHeader.getText().contains("Success"));
+            Assert.assertTrue(selectYourReportPage.chartHeader2.getText().contains("Success"));
+            Assert.assertTrue(selectYourReportPage.chartHeader3.getText().contains("Disqualification"));
             Assert.assertTrue(selectYourReportPage.statisticHeader.isDisplayed());
             Assert.assertTrue(selectYourReportPage.statisticHeader2.isDisplayed());
             Assert.assertTrue(selectYourReportPage.statisticHeader3.isDisplayed());

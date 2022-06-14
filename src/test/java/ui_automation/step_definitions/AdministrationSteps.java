@@ -26,15 +26,16 @@ public class AdministrationSteps {
         String text = "QAtesting";
         String email ="qatesting@mail.com";
         Faker faker = new Faker();
-        faker.address().fullAddress();
+
+
 
         if(subtabs.equals("Authentication")){
 
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             administrationPage.addUserBtn.click();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             administrationPage.emailInput.sendKeys(email);
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             administrationPage.roleChangeToUser.click();
             administrationPage.PHIaccessChanger.click();
             administrationPage.checkBox1.click();
@@ -50,7 +51,7 @@ public class AdministrationSteps {
             administrationPage.deleteUser.click();
             Thread.sleep(2000);
             Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains(email));
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             administrationPage.confirmDelete.click();
         }
         else if(subtabs.equals("Site Registration")){
@@ -61,8 +62,7 @@ public class AdministrationSteps {
             Thread.sleep(1000);
             administrationPage.siteName.sendKeys(text);
             administrationPage.siteID.sendKeys(num);
-            administrationPage.addressLine1.sendKeys("<script>alert(document.domain)</script>");
-            administrationPage.addressLine2.sendKeys("<script>alert(document.domain)</script>");
+            administrationPage.addressLine1.sendKeys("1254 District South Drive");
             administrationPage.city.sendKeys("Boston");
             administrationPage.zipcode.sendKeys("01566");
             administrationPage.state.sendKeys("MA");

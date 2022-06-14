@@ -56,11 +56,14 @@ public class SelectYourReportPage {
     @FindBy(xpath = "(//span[text()='NASH'])[2]")
     public WebElement dropdownSelect;
 
-    @FindBy(xpath = "(//h3[@class='chart__header'])[1]")
+    @FindBy(xpath = "(//h3[@class='chart__header'])")
     public WebElement chartHeader;
 
     @FindBy(xpath = "(//h3[@class='chart__header'])[2]")
     public WebElement chartHeader2;
+
+    @FindBy(xpath = "(//h3[@class='chart__header'])[3]")
+    public WebElement chartHeader3;
 
     @FindBy(xpath = "(//h3[@class='statistics-report__header'])[1]")
     public WebElement statisticHeader;

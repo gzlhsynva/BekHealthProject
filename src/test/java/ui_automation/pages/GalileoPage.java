@@ -56,7 +56,7 @@ public class GalileoPage {
         @FindBy(xpath = "(//input[@class='el-input__inner'])[16]")
     public WebElement parentFolderBtn;
 
-        @FindBy(xpath = "//span[@class='expanded el-tree-node__expand-icon el-icon-caret-right']")
+        @FindBy(xpath = "(//span[@class='el-tree-node__expand-icon el-icon-caret-right'])[2]/..")
     public WebElement folderClick;
 
     @FindBy(xpath = "//span[text()='Morgan Smith sandbox']/..")
@@ -89,13 +89,13 @@ public class GalileoPage {
       @FindBy(xpath = "(//*[contains(text(),'Saved Trials and Criteria')])[2]")
     public WebElement savedTrialsAndCriteriaBtn;
 
-          @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[38]")
+          @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[43]")
     public WebElement bekTestingLibraryDropdown;
 
       @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[39]")
     public WebElement sandbox;
 
-          @FindBy(xpath = "(//span[text()=' Delete '])[608]")
+          @FindBy(xpath = "(//span[text()=' Delete '])[911]")
     public WebElement deleteBtn;
 
     @FindBy(xpath = "//div[@class='el-message-box__message']")
