@@ -14,19 +14,19 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@class='el-card__body']")
+    @FindBy(xpath = "//*[@class='shadow-lg mb-24']")
     public WebElement table;
 
-    @FindBy(xpath = "//*[@class='card-title']")
+    @FindBy(xpath = "//*[@class='flex-grow font-bold text-2xl text-blue-dark']")
     public WebElement tableText;
 
-   @FindBy(xpath = "//input[@placeholder='John Doe' or @type='type']")
+    @FindBy(xpath = "//input[@placeholder='John Doe' or @type='type']")
     public WebElement candidateLookUpBtn;
 
     @FindBy(xpath = "//input[@placeholder='123456789' or @type='type']")
     public WebElement candidateLookUpBtnByPhone;
 
-    @FindBy(xpath = "//a[@href='#/auto-recruiter/prescreen/UGF0aWVudDo2MDAwN2RkYzQ3OTkyMzFmYTM5MWM4NTU=']")
+    @FindBy(xpath = "//a[@class='text-blue-lighter2 hover:text-blue-lightest']")
     public WebElement candidateNameVerification;
 
     @FindBy(xpath = "//*[@class='el-input__inner'][@placeholder='Select']")
@@ -38,10 +38,10 @@ public class HomePage {
     @FindBy(xpath = "(//div[@class='cell'])[10]")
     public WebElement candidatePhoneNumVerification;
 
-    @FindBy(xpath = "//div[@class='el-card__body']//tr[2]/td[1]//*//*")
-    public WebElement depressionTrialNameBtn;
+    @FindBy(xpath = "//a[text()=' Early Alzheimers Disease ']")
+    public WebElement alzheimersTrialNameBtn;
 
-    @FindBy(xpath = "//span[contains(text(),'(See list)')]")
+    @FindBy(xpath = "//span[contains(text(),'Candidates List')]")
     public WebElement seeListBtn;
 
     @FindBy(xpath = "//span[text()='Filters']")
@@ -50,7 +50,7 @@ public class HomePage {
     @FindBy(xpath = "//input[@placeholder='Sort by Name']")
     public WebElement sortNameFilter;
 
-    @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[8]//li[2]")
+    @FindBy(xpath = "//span[text()='First Name A-Z']")
     public WebElement sortFilteroption2;
 
     @FindBy(xpath = "//input[@placeholder='Filter by Site Name']")
@@ -59,26 +59,31 @@ public class HomePage {
     @FindBy(xpath = "//input[@placeholder='Filter by Criteria']")
     public WebElement sortCriteriaFilter;
 
-    @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[8]//li[1]")
+    @FindBy(xpath = "//span[text()='All Tiers']")
     public WebElement sortFilteroption1;
 
-    @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[7]")
+    @FindBy(xpath = "//li[@class='el-select-dropdown__item aqa-select-primary-provider-option']/span[text()='All']")
+    public WebElement sortFilteroption4;
+
+    @FindBy(xpath = "(//input[@class='el-select__input is-mini'])[1]")
     public WebElement sortPrimaryProviderFilter;
 
-    @FindBy(xpath = "//div[@class='el-tabs__content']//td[2]/*/*/*/*")
+    @FindBy(xpath = "//button[@class='el-button name aqa-patient-details-page-link el-button--text']/*[text()='Aaron Cooper']")
     public WebElement tableName1;
 
 
     @FindBy(xpath = "//span[@class='el-table__empty-text']")
     public WebElement emptyTable;
 
-        @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[8]")
+    @FindBy(xpath = "(//input[@class='el-select__input is-mini'])[2]")
     public WebElement filterByProvider;
 
-        @FindBy(xpath = "(//ul[@class='el-scrollbar__view el-select-dropdown__list'])[8]//li[3]")
+    @FindBy(xpath = "//li[@class='el-select-dropdown__item aqa-select-provider-option']/span[text()='All']")
     public WebElement sortFilteroption3;
 
-        @FindBy(xpath = "//h4[text()='Primary Provider']")
+    @FindBy(xpath = "//h4[text()='Search by Name']")
     public WebElement clickOff;
 
 }
+
+

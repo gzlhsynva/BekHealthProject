@@ -15,8 +15,8 @@ Feature: This feature file tests Home Page functionality
     When user enter valid credentials and clicks on login button
     Then user clicks the Candidate Look Up button and looks up "<candidates>" and then verifies the information
     Examples:
-    |candidates         |
-    |Caroline Johnson Guzman|
+      |candidates         |
+      |Caroline Johnson Guzman|
 
 
   @homepage3
@@ -33,8 +33,8 @@ Feature: This feature file tests Home Page functionality
     Then user validates the displayed table on Homepage
     Then user clicks on a trial name and verifies its functionality
 
-  @homepage5
-  Scenario: user logs into BekHealth website with an admin account and checks its functionalities
+#  @homepage5
+#  Scenario: user logs into BekHealth website with an admin account and checks its functionalities
     When user enter valid credentials and clicks on login button
     Then user clicks Auto Recruiter page from navigation
     Then user validates the table that is present and the list of categories
@@ -42,8 +42,8 @@ Feature: This feature file tests Home Page functionality
     Then user navigates to Galileo Page
     Then user validates Galileo Page
 
-  @homepage6
-  Scenario: user logs into BekHealth website with user account and checks its functionalities
+#  @homepage6
+#  Scenario: user logs into BekHealth website with user account and checks its functionalities
     When user enter valid user credentials and clicks on login button
     Then user clicks Auto Recruiter page from navigation
     And validates Auto Recruiter page
@@ -51,3 +51,4 @@ Feature: This feature file tests Home Page functionality
     And validates Administration page
     Then user navigates to Galileo Page
     Then user validates Galileo Page
+

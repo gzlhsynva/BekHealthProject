@@ -12,7 +12,7 @@ public class HomePageSteps {
     @Then("user validates the displayed table on Homepage")
     public void user_validates_the_displayed_table_on_Homepage() {
         homePage.table.isDisplayed();
-        String expectedTableText ="Trials Table";
+        String expectedTableText ="Trials";
         String tableText = homePage.tableText.getText();
         tableText.trim();
         Assert.assertEquals("Table and Text not displayed!",expectedTableText,tableText);
@@ -23,7 +23,7 @@ public class HomePageSteps {
 
         homePage.candidateLookUpBtn.sendKeys(candidate);
         homePage.candidateLookUpBtn.sendKeys(Keys.ENTER);
-        Thread.sleep(10000);
+        Thread.sleep(2000);
         String actualCandidateName = homePage.candidateNameVerification.getText();
         Thread.sleep(2000);
         Assert.assertTrue(actualCandidateName.contains(candidate));
@@ -51,7 +51,7 @@ public class HomePageSteps {
 
     @Then("user clicks on a trial name and verifies its functionality")
     public void user_clicks_on_a_trial_name_and_verifies_its_functionality() throws InterruptedException {
-        homePage.depressionTrialNameBtn.click();
+        homePage.alzheimersTrialNameBtn.click();
         Thread.sleep(2000);
         homePage.seeListBtn.click();
         Thread.sleep(1000);
@@ -67,26 +67,26 @@ public class HomePageSteps {
         Thread.sleep(2000);
         homePage.sortPrimaryProviderFilter.click();
         Thread.sleep(3000);
-        homePage.sortFilteroption1.click();
+        homePage.sortFilteroption4.click();
         Thread.sleep(2000);
         homePage.clickOff.click();
         Thread.sleep(2000);
         homePage.filterByProvider.click();
         Thread.sleep(2000);
-        homePage.sortFilteroption1.click();
+        homePage.sortFilteroption3.click();
         Thread.sleep(2000);
 //        homePage.sortFilteroption3.click();
 //        Thread.sleep(2000);
         homePage.filtersBtn.click();
         Thread.sleep(2000);
-        Assert.assertTrue(homePage.tableName1.getText().contains("Brian Rogers"));
+        Assert.assertTrue(homePage.tableName1.getText().contains("Aaron Cooper"));
 
     }
 
 
     @Then("validates Auto Recruiter page")
     public void validates_Auto_Recruiter_page() {
-    Assert.assertTrue(homePage.emptyTable.getText().equals("No Data"));
+        Assert.assertTrue(homePage.emptyTable.getText().equals("No Data"));
     }
 
     @Then("validates Administration page")
@@ -98,3 +98,5 @@ public class HomePageSteps {
 
 
 }
+
+
