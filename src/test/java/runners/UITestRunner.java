@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         tags="@homepage",
         dryRun = false
         //monochrome = true
-//test
+//test2
 )
 
 
