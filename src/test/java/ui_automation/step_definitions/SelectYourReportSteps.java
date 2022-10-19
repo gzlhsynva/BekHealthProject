@@ -66,7 +66,7 @@ public class SelectYourReportSteps {
             selectYourReportPage.userPerformanceReportDropdown.click();
             Thread.sleep(1000);
             Assert.assertTrue(selectYourReportPage.userPerformanceBoxHeader.isDisplayed());
-            Assert.assertTrue(selectYourReportPage.userPerformanceBoxHeader2.isDisplayed());
+//            Assert.assertTrue(selectYourReportPage.userPerformanceBoxHeader2.isDisplayed());
         }
 
     }
@@ -113,7 +113,7 @@ public class SelectYourReportSteps {
             Assert.assertTrue(selectYourReportPage.userPerformanceBoxHeader2.isDisplayed());
             selectYourReportPage.dropdown3.click();
             Thread.sleep(1000);
-            selectYourReportPage.dropdownOption.click();
+            selectYourReportPage.dropdownOption2.click();
             Assert.assertTrue(selectYourReportPage.userPerformanceBoxHeader.isDisplayed());
             Assert.assertTrue(selectYourReportPage.userPerformanceBoxHeader2.isDisplayed());
 

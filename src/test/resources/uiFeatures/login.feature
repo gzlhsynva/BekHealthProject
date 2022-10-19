@@ -13,7 +13,7 @@ Feature: This feature file tests Login Page functionality
       |username|password|errorMessage|
       |valid   |valid   |            |
       |valid   |invalid |Access denied: Wrong email or password|
-      |empty   |valid   |Please input email address|
+#      |empty   |valid   |Please input email address|
       |valid   |empty   |Please input password     |
 
 

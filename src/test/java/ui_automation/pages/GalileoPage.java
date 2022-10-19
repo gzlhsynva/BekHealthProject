@@ -14,10 +14,10 @@ public class GalileoPage {
         PageFactory.initElements(driver, this);
     }
 
-        @FindBy(xpath = "//*[@class='menu-icon fa-icon el-popover__reference']")
+        @FindBy(xpath = "//*[@class='h-7 w-7 cursor-pointer text-[#91b6c5] fa-icon el-popover__reference']/*")
     public WebElement menuBtn;
 
-        @FindBy(xpath = "(//*[@class='menu-item'])[4]")
+        @FindBy(xpath = "//div[text()='Galileo']")
     public WebElement  galileoBtn;
 
         @FindBy(xpath = "//input[@placeholder='Select']")

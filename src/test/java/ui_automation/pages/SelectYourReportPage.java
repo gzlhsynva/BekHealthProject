@@ -17,13 +17,13 @@ public class SelectYourReportPage {
     @FindBy(xpath = "//span[text()='Operational Performance Report']")
     public WebElement operationalPerformanceDropdown;
 
-    @FindBy(xpath = "//h1[text()='Operational Performance Report']")
+    @FindBy(xpath = "//h1[contains(text(),'Operational Performance Report')]")
     public WebElement selectOperationalPerformanceReportText;
 
     @FindBy(xpath = "//span[text()='User Performance Report']")
     public WebElement userPerformanceReportDropdown;
 
-    @FindBy(xpath = "//h1[text()='User Performance Report']")
+    @FindBy(xpath = "//h1[contains(text(),'User Performance Report')]")
     public WebElement selectUserPerformanceReportText;
 
         @FindBy(xpath = "//h3[@class='chart__header']")
@@ -38,10 +38,10 @@ public class SelectYourReportPage {
     @FindBy(xpath = "//h3[@class='chart__header'][text()='Reasons for Candidates Ignored']")
     public WebElement operationalPerformanceChartHeader2;
 
-    @FindBy(xpath = "//h3[@class='statistics-report__header'][text()='Average candidates contacted per week']")
+    @FindBy(xpath = "//h4[@class='exhaustion-time-kpi__header'][text()=' Exhaustion Time of 5 Top and Bottom Trials ']")
     public WebElement userPerformanceBoxHeader;
 
-    @FindBy(xpath = "//h3[@class='statistics-report__header'][text()='Average days in pending review']")
+    @FindBy(xpath = "//p[@class='statistics-report__header text-base'][text()='Average days in pending review']")
     public WebElement userPerformanceBoxHeader2;
 
     @FindBy(xpath = "//div[@class='expand-icon']/*")
@@ -65,20 +65,23 @@ public class SelectYourReportPage {
     @FindBy(xpath = "(//h3[@class='chart__header'])[3]")
     public WebElement chartHeader3;
 
-    @FindBy(xpath = "(//h3[@class='statistics-report__header'])[1]")
+    @FindBy(xpath = "(//p[@class='statistics-report__header text-base'])[1]")
     public WebElement statisticHeader;
 
-    @FindBy(xpath = "(//h3[@class='statistics-report__header'])[2]")
+    @FindBy(xpath = "(//p[@class='statistics-report__header text-base'])[2]")
     public WebElement statisticHeader2;
 
-    @FindBy(xpath = "(//h3[@class='statistics-report__header'])[3]")
+    @FindBy(xpath = "(//p[@class='statistics-report__header text-base'])[3]")
     public WebElement statisticHeader3;
 
     @FindBy(xpath = "(//button[@class='el-button trial-dropdown__button el-button--primary el-dropdown-selfdefine     '])")
     public WebElement dropdown2;
 
-    @FindBy(xpath = "//*[text()=' Breast Cancer ']")
+    @FindBy(xpath = "(//*[text()=' Breast Cancer '])")
     public WebElement dropdownOption;
+
+    @FindBy(xpath = "(//*[text()=' INCEPTION '])")
+    public WebElement dropdownOption2;
 
     @FindBy(xpath = "(//button[@class='el-button trial-dropdown__button el-button--primary el-dropdown-selfdefine'])")
     public WebElement dropdown3;

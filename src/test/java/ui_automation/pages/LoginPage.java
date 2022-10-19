@@ -17,7 +17,10 @@ public class LoginPage {
     @FindBy(xpath = "//input[@type='text']")
     public WebElement usernameTextBox;
 
-    @FindBy(xpath = "//input[@type='password']")
+    @FindBy(xpath = "//*[text()='Continue']")
+    public WebElement continueBox;
+
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement passwordTextBox;
 
     @FindBy(xpath = "//*[@class='el-message__content']")
@@ -26,21 +29,30 @@ public class LoginPage {
     @FindBy(xpath = "//*[@class='el-form-item__error']")
     public WebElement inputEmailAddress;
 
-    @FindBy(xpath = "//*[@class='el-button login-button el-button--primary']")
-    public WebElement signInBtn;
+//    @FindBy(xpath = "//*[@class='el-button login-button el-button--primary']")
+//    public WebElement signInBtn;
+
+    @FindBy(xpath = "//button[text()='Accept']")
+    public WebElement acceptBtn;
+
+//    @FindBy(xpath = "//input[@id='captcha']")
+//    public WebElement captcha;
 
 
 
-    public void login(){
+    public void login() throws InterruptedException {
+
         usernameTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealth.username"));
+        Thread.sleep(8000);
+        continueBox.click();
         passwordTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealth.password"));
-        signInBtn.click();
+        continueBox.click();
     }
 
     public void userLogin(){
         usernameTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealthDev.username"));
         passwordTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealthDev.password"));
-        signInBtn.click();
+        continueBox.click();
     }
 
 }

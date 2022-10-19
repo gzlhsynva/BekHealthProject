@@ -13,7 +13,8 @@ public class WidgetSteps {
 
 
     @Then("user clicks the widget button")
-    public void user_clicks_the_widget_button() {
+    public void user_clicks_the_widget_button() throws InterruptedException {
+        Thread.sleep(2000);
         galileoPage.menuBtn.click();
     }
 

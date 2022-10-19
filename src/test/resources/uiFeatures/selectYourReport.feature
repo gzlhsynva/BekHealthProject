@@ -12,7 +12,7 @@ Feature: This feature file tests Select Your Report functionality
 
     Examples:
       |Select Report|
-      |Operational Report|
+#      |Operational Report|
       |Operational Performance Report|
       |User Performance Report|
 
@@ -23,6 +23,6 @@ Feature: This feature file tests Select Your Report functionality
 
     Examples:
       |Select Report|
-      |Operational Report|
+#      |Operational Report|
       |Operational Performance Report|
       |User Performance Report|

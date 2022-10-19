@@ -15,13 +15,13 @@ public class WidgetPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//h1[text()='Galileo']")
+    @FindBy(xpath = "//h1[contains(text(),'Galileo')]")
     public WebElement galileoText;
 
     @FindBy(xpath = "//*[text()='Reporting']")
     public WebElement reportingWidget;
 
-    @FindBy(xpath = "//div[text()='Auto Recruiter']")
+    @FindBy(xpath = "//div[contains(text(),'Auto')]")
     public WebElement autoRecruiterWidget;
 
     @FindBy(xpath = "//div[text()='Administration']")
@@ -30,10 +30,10 @@ public class WidgetPage {
     @FindBy(xpath = "//*[contains(text(),'Patient Attrition:')]")
     public WebElement reportingText;
 
-        @FindBy(xpath = "//h1[text()='Trial Portfolio']")
+        @FindBy(xpath = "//h1[contains(text(),'Trial Portfolio')]")
     public WebElement autoRecruiterText;
 
-        @FindBy(xpath = "//span[text()='User Management']")
+        @FindBy(xpath = "//span[contains(text(),'User Management')]")
     public WebElement administrationText;
 
         @FindBy(xpath = "//span[text()='Select Your Report']")
@@ -44,5 +44,8 @@ public class WidgetPage {
 
         @FindBy(xpath = "//span[text()='Operational Report']")
     public WebElement operationalReportDropdown;
+
+
+
 
 }

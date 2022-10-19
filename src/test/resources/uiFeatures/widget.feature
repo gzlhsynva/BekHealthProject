@@ -12,7 +12,7 @@ Feature: This feature file tests Widget Page functionality
   Examples:
   |widget|
   |Galileo|
-  |Reporting|
+#  |Reporting|
   |Auto Recruiter|
   |Administration|
 

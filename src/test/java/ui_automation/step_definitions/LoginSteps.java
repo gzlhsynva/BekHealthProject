@@ -12,8 +12,10 @@ public class LoginSteps {
 
 
     @When("user is in  BekHealth page")
-    public void user_is_in_BekHealth_page() {
+    public void user_is_in_BekHealth_page() throws InterruptedException {
         Driver.getInstance().getDriver().get(ConfigurationReader.getProperty("ui-config.properties","BekHealth.url"));
+        Thread.sleep(2000);
+        loginPage.acceptBtn.click();
     }
 
     @Then("user enters {string} and {string}")
@@ -31,7 +33,7 @@ public class LoginSteps {
             default:
                 throw new Exception(username + " Username type is undefined!");
         }
-
+        loginPage.continueBox.click();
         switch (password) {
             case "invalid":
                 loginPage.passwordTextBox.sendKeys("invalidPassword");
@@ -45,7 +47,7 @@ public class LoginSteps {
             default:
                 throw new Exception(password + "Password type is undefined!");
         }
-        loginPage.signInBtn.click();
+        loginPage.continueBox.click();
         Thread.sleep(1000);
     }
 
@@ -69,7 +71,7 @@ public class LoginSteps {
     }
 
     @When("user enter valid credentials and clicks on login button")
-    public void user_enter_valid_credentials_and_clicks_on_login_button() {
+    public void user_enter_valid_credentials_and_clicks_on_login_button() throws InterruptedException {
         loginPage.login();
     }
 
