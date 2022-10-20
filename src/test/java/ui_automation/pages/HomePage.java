@@ -84,6 +84,40 @@ public class HomePage {
     @FindBy(xpath = "//h4[text()='Search by Name']")
     public WebElement clickOff;
 
+    @FindBy(xpath = "//button[@class='fixed left-0 top-[269px] !py-3 !px-4 text-sm text-center py-2.5 px-5 bg-blue-darker text-white border-azure-light rounded-tr-md rounded-br-md']")
+    public WebElement filtersBtnHomepage;
+
+    @FindBy(xpath = "//input[@id=\"disease area-alzheimer's disease\"]")
+    public WebElement alzheimerCheckBox;
+
+    @FindBy(xpath = "//input[@id=\"disease area-paroxysmal nocturnal hemoglobinuria\"]")
+    public WebElement paroxysmalCheckBox;
+
+    @FindBy(xpath = "//input[@id='disease area-mdd']")
+    public WebElement mddCheckBox;
+
+    @FindBy(xpath = "//input[@id='disease area-atrial fibrillation']")
+    public WebElement atrialCheckBox;
+
+    @FindBy(xpath = "//input[@id='disease area-breast cancer']")
+    public WebElement breastcanserCheckBox;
+
+    @FindBy(xpath = "//input[@id='disease area-nash']")
+    public WebElement nashCheckBox;
+
+    @FindBy(xpath = "//label[@class='flex-grow cursor-pointer'][text()=' NSCLC '][@for='diagnosis-nsclc']")
+    public WebElement nsclscheckBox;
+
+    @FindBy(xpath = "//a[@href='/trial-portfolio/trial/VHJpYWw6NjA4OTkzZTlmMjZkYjk5MzA3NWIxYTIz']")
+    public WebElement alzaimersDiseaseText;
+
+    @FindBy(xpath = "//button[@class='w-32 text-sm text-center py-1 px-1 border bg-white text-gray-dark border-gray-lighter font-semibold rounded-md']")
+    public WebElement resetBTN;
+
+    @FindBy(xpath = "//button[@class='h-7 w-7 text-gray-darker text-2xl flex justify-center items-center']")
+    public WebElement exitBTN;
+
+
 }
 
 

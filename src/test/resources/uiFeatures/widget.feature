@@ -1,4 +1,4 @@
-@regression @widget
+@regression @widget @new
 Feature: This feature file tests Widget Page functionality
 
   Background:

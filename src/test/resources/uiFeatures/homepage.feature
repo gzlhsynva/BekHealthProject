@@ -1,4 +1,4 @@
-@regression @homepage
+@regression @homepage @new
 Feature: This feature file tests Home Page functionality
 
   Background:
@@ -33,7 +33,15 @@ Feature: This feature file tests Home Page functionality
     Then user validates the displayed table on Homepage
     Then user clicks on a trial name and verifies its functionality
 
-#  @homepage5
+  @homepage5
+  Scenario: user validates the filer functionality on the Home page
+    When user enter valid credentials and clicks on login button
+    Then user validates the displayed table on Homepage
+    Then user clicks on the filters button
+    And verifies the filters button functionality
+
+
+#  @homepage6
 #  Scenario: user logs into BekHealth website with an admin account and checks its functionalities
 #    When user enter valid credentials and clicks on login button
 #    Then user clicks Auto Recruiter page from navigation
@@ -42,7 +50,7 @@ Feature: This feature file tests Home Page functionality
 #    Then user navigates to Galileo Page
 #    Then user validates Galileo Page
 
-#  @homepage6
+#  @homepage7
 #  Scenario: user logs into BekHealth website with user account and checks its functionalities
 #    When user enter valid user credentials and clicks on login button
 #    Then user clicks Auto Recruiter page from navigation

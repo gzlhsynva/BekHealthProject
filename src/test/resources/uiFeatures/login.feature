@@ -1,4 +1,4 @@
-@regression @login
+@regression @login @new
 Feature: This feature file tests Login Page functionality
 
   Background:

@@ -1,4 +1,4 @@
-@regression  @selectYourReport
+@regression  @selectYourReport @new
 Feature: This feature file tests Select Your Report functionality
 
   Background:

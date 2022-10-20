@@ -95,7 +95,25 @@ public class HomePageSteps {
     }
 
 
+    @Then("user clicks on the filters button")
+    public void user_clicks_on_the_filters_button() {
+        homePage.filtersBtnHomepage.click();
+    }
 
+    @Then("verifies the filters button functionality")
+    public void verifies_the_filters_button_functionality() {
+    homePage.alzheimerCheckBox.click();
+    homePage.paroxysmalCheckBox.click();
+    homePage.mddCheckBox.click();
+    homePage.atrialCheckBox.click();
+    homePage.breastcanserCheckBox.click();
+    homePage.nashCheckBox.click();
+    homePage.nsclscheckBox.click();
+    Assert.assertTrue(homePage.alzaimersDiseaseText.isDisplayed());
+    homePage.resetBTN.click();
+    homePage.exitBTN.click();
+    Assert.assertTrue(homePage.alzaimersDiseaseText.isDisplayed());
+    }
 
 }
 
