@@ -25,7 +25,7 @@ public class HomePageSteps {
         homePage.candidateLookUpBtn.sendKeys(Keys.ENTER);
         Thread.sleep(2000);
         String actualCandidateName = homePage.candidateNameVerification.getText();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         Assert.assertTrue(actualCandidateName.contains(candidate));
 
     }
@@ -79,7 +79,7 @@ public class HomePageSteps {
 //        Thread.sleep(2000);
         homePage.filtersBtn.click();
         Thread.sleep(2000);
-        Assert.assertTrue(homePage.tableName1.getText().contains("Aaron Cooper"));
+        Assert.assertTrue(homePage.tableName1.isDisplayed());
 
     }
 

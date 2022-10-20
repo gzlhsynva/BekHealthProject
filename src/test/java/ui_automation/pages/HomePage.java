@@ -68,7 +68,7 @@ public class HomePage {
     @FindBy(xpath = "(//input[@class='el-select__input is-mini'])[1]")
     public WebElement sortPrimaryProviderFilter;
 
-    @FindBy(xpath = "//button[@class='el-button name aqa-patient-details-page-link el-button--text']/*[text()='Aaron Cooper']")
+    @FindBy(xpath = "//div[text()='Name']")
     public WebElement tableName1;
 
 

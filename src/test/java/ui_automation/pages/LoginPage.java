@@ -43,7 +43,7 @@ public class LoginPage {
     public void login() throws InterruptedException {
 
         usernameTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealth.username"));
-        Thread.sleep(8000);
+        Thread.sleep(9000);
         continueBox.click();
         passwordTextBox.sendKeys(ConfigurationReader.getProperty("ui-config.properties","BekHealth.password"));
         continueBox.click();
