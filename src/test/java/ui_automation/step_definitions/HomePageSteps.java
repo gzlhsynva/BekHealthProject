@@ -77,8 +77,8 @@ public class HomePageSteps {
         Thread.sleep(2000);
 //        homePage.sortFilteroption3.click();
 //        Thread.sleep(2000);
-        homePage.filtersBtn.click();
-        Thread.sleep(2000);
+//        homePage.filtersBtn.click();
+//        Thread.sleep(2000);
         Assert.assertTrue(homePage.tableName1.isDisplayed());
 
     }

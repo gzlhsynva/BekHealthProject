@@ -35,20 +35,20 @@ Feature: This feature file tests Home Page functionality
 
 #  @homepage5
 #  Scenario: user logs into BekHealth website with an admin account and checks its functionalities
-    When user enter valid credentials and clicks on login button
-    Then user clicks Auto Recruiter page from navigation
-    Then user validates the table that is present and the list of categories
-    Then user clicks the menu button and navigates to administration page and validates it
-    Then user navigates to Galileo Page
-    Then user validates Galileo Page
+#    When user enter valid credentials and clicks on login button
+#    Then user clicks Auto Recruiter page from navigation
+#    Then user validates the table that is present and the list of categories
+#    Then user clicks the menu button and navigates to administration page and validates it
+#    Then user navigates to Galileo Page
+#    Then user validates Galileo Page
 
 #  @homepage6
 #  Scenario: user logs into BekHealth website with user account and checks its functionalities
-    When user enter valid user credentials and clicks on login button
-    Then user clicks Auto Recruiter page from navigation
-    And validates Auto Recruiter page
-    Then user clicks the menu button and navigates to administration page and validates it
-    And validates Administration page
-    Then user navigates to Galileo Page
-    Then user validates Galileo Page
+#    When user enter valid user credentials and clicks on login button
+#    Then user clicks Auto Recruiter page from navigation
+#    And validates Auto Recruiter page
+#    Then user clicks the menu button and navigates to administration page and validates it
+#    And validates Administration page
+#    Then user navigates to Galileo Page
+#    Then user validates Galileo Page
 
