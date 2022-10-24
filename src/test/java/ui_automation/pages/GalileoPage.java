@@ -86,16 +86,16 @@ public class GalileoPage {
           @FindBy(xpath = "(//input[@class='el-input__inner'])[13]")
     public WebElement mocaTextBox2;
 
-      @FindBy(xpath = "(//*[contains(text(),'Saved Trials and Criteria')])[2]")
+      @FindBy(xpath = "//span[text()='Saved Trials and Criteria'][@class='link__text']")
     public WebElement savedTrialsAndCriteriaBtn;
 
-          @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[43]")
+          @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[6]")
     public WebElement bekTestingLibraryDropdown;
 
       @FindBy(xpath = "(//i[@class='el-icon-arrow-right'])[39]")
     public WebElement sandbox;
 
-          @FindBy(xpath = "(//span[text()=' Delete '])[911]")
+          @FindBy(xpath = "/html/body/div[1]/div/div[2]/div/div[2]/div/div[3]/table/tbody/tr[167]/td[3]/div/button[3]/span")
     public WebElement deleteBtn;
 
     @FindBy(xpath = "//div[@class='el-message-box__message']")
@@ -107,7 +107,7 @@ public class GalileoPage {
     @FindBy(xpath = "//input[@placeholder='Type to search trials and criteria']")
     public WebElement searchBtn;
 
-    @FindBy(xpath = "//a[text()=' some cohort ']")
+    @FindBy(xpath = "//a[text()=' CKD ']")
     public WebElement searchedTextVerification;
 
     @FindBy(xpath = "(//*[contains(text(),'Add')])[4]")

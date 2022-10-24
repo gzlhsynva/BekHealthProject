@@ -67,7 +67,7 @@ public class GalileoSteps {
 //        galileoPage.folderClick2.click();
 //        Thread.sleep(1000);
         galileoPage.submitBtn.click();
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         galileoPage.savedTrialsAndCriteriaBtn.click();
         Thread.sleep(3000);
         galileoPage.bekTestingLibraryDropdown.click();
@@ -93,7 +93,7 @@ public class GalileoSteps {
 
     @Then("user uses the search button and verifies the result")
     public void user_uses_the_search_button_and_verifies_the_result() throws InterruptedException {
-        String text = "some cohort";
+        String text = "CKD";
         WebElement search = galileoPage.searchBtn;
         search.sendKeys(text);
         search.sendKeys(Keys.ENTER);
