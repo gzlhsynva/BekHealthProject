@@ -76,7 +76,7 @@ public class AdministrationSteps {
             administrationPage.selectUsers.click();
             Thread.sleep(4000);
             administrationPage.userSelect.click();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             administrationPage.userSelect32.click();
             Thread.sleep(1000);
             administrationPage.userSelect3.click();
