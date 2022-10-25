@@ -107,7 +107,7 @@ public class GalileoPage {
     @FindBy(xpath = "//input[@placeholder='Type to search trials and criteria']")
     public WebElement searchBtn;
 
-    @FindBy(xpath = "//a[text()=' CKD ']")
+    @FindBy(xpath = "//a[text()=' Males ']")
     public WebElement searchedTextVerification;
 
     @FindBy(xpath = "(//*[contains(text(),'Add')])[4]")

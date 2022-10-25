@@ -70,10 +70,10 @@ public class HomePageSteps {
         homePage.sortFilteroption4.click();
         Thread.sleep(2000);
         homePage.clickOff.click();
-        Thread.sleep(2000);
-        homePage.filterByProvider.click();
-        Thread.sleep(2000);
-        homePage.sortFilteroption3.click();
+        Thread.sleep(4000);
+//        homePage.filterByProvider.click();
+//        Thread.sleep(2000);
+//        homePage.sortFilteroption3.click();
         Thread.sleep(2000);
 //        homePage.sortFilteroption3.click();
 //        Thread.sleep(2000);

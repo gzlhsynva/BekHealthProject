@@ -18,7 +18,7 @@ public class AdministrationPage {
 
 
 
-    @FindBy(xpath = "(//*[@class='menu-item'])[2]")
+    @FindBy(xpath = "//div[text()='Administration']")
     public WebElement administrationTabBtn;
 
     @FindBy(xpath = "//span[text()='User Management']")
@@ -66,13 +66,13 @@ public class AdministrationPage {
     @FindBy(xpath = "(//span[@class='el-radio__inner'])[3]")
     public WebElement PHIaccessChanger;
 
-    @FindBy(xpath = "(//span[text()='Delete'])[33]")
+    @FindBy(xpath = "(//span[text()=' Delete '])[50]")
     public WebElement deleteUser;
 
     @FindBy(xpath = "//span[contains(text(),'Confirm')]")
     public WebElement confirmDelete;
 
-    @FindBy(xpath = "//div[@class='el-message-box__message']")
+    @FindBy(xpath = "//div[@class='el-message-box__message']/*")
     public WebElement deleteTextConfirm;
 
     @FindBy(xpath = "//span[text()='Site Registration']")
@@ -138,7 +138,7 @@ public class AdministrationPage {
     @FindBy(xpath = "//span[contains(text(),'ghuseynova')]")
     public WebElement userSelect2;
 
-    @FindBy(xpath = "//span[contains(text(),'amordasov')]")
+    @FindBy(xpath = "//span[contains(text(),'daniil')]")
     public WebElement userSelect23;
 
     @FindBy(xpath = "//span[contains(text(),'bstrahan')]")
@@ -166,7 +166,7 @@ public class AdministrationPage {
     @FindBy(xpath = "(//i[@class='el-select__caret el-input__icon el-icon-arrow-up'])[3]")
     public WebElement usersGroups;
 
-    @FindBy(xpath = "(//span[text()='Delete'])[12]")
+    @FindBy(xpath = "(//span[text()=' Delete '])[11]")
     public WebElement delete3;
 
     @FindBy(xpath = "//div[text()='qatesting@mail.com']")

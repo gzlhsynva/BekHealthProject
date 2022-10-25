@@ -73,14 +73,28 @@ public class AutoRecruiterSteps {
 //        autoRecruiterPage.nullPstQueryOptionSelect2.click();
 //        Thread.sleep(2000);
         autoRecruiterPage.submitBtn.click();
-
+        Thread.sleep(2000);
+        autoRecruiterPage.deleteBtn.click();
+        Thread.sleep(2000);
+        String deleteTextMessage = galileoPage.deleteTextConfirm.getText();
+        Assert.assertTrue(deleteTextMessage.contains(text));
+        Thread.sleep(2000);
+        autoRecruiterPage.okDeleteBtn.click();
+        Thread.sleep(3000);
     }
 
-    @Then("user confirms that the trial was not created")
-    public void user_confirms_that_the_trial_was_not_created() {
-       Assert.assertTrue(autoRecruiterPage.errorMessage.isDisplayed());
-
-    }
+//    @Then("user confirms that the trial was not created")
+//    public void user_confirms_that_the_trial_was_not_created() throws InterruptedException {
+//        String text = "QA testing";
+//       autoRecruiterPage.deleteBtn.click();
+//        Thread.sleep(2000);
+//        String deleteTextMessage = galileoPage.deleteTextConfirm.getText();
+//        Assert.assertTrue(deleteTextMessage.contains(text));
+//        Thread.sleep(2000);
+//        galileoPage.deleteConfirm.click();
+//        Thread.sleep(3000);
+//
+//    }
 
 //    @Then("user deletes the trial")
 //    public void user_deletes_the_trial() throws InterruptedException {
@@ -113,7 +127,7 @@ public class AutoRecruiterSteps {
     @Then("user clicks on {string} button and verifies the page")
     public void user_clicks_on_button_and_verifies_the_page(String pageVerificationText) throws InterruptedException {
        autoRecruiterPage.inactivePatientListBtn.click();
-       Thread.sleep(2000);
+       Thread.sleep(8000);
        Assert.assertTrue(autoRecruiterPage.inactivePatientsText.getText().contains(pageVerificationText));
     }
 

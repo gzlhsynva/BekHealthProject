@@ -93,14 +93,14 @@ public class GalileoSteps {
 
     @Then("user uses the search button and verifies the result")
     public void user_uses_the_search_button_and_verifies_the_result() throws InterruptedException {
-        String text = "CKD";
+        String text = "Males";
         WebElement search = galileoPage.searchBtn;
         search.sendKeys(text);
         search.sendKeys(Keys.ENTER);
         Thread.sleep(1000);
         String actualText =galileoPage.searchedTextVerification.getText();
         Assert.assertEquals(text,actualText);
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
 

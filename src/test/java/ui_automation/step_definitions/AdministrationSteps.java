@@ -23,8 +23,8 @@ public class AdministrationSteps {
     public void user_validates_the(String subtabs) throws InterruptedException {
         String phoneNum ="2134567890";
         String num = "12345";
-        String text = "QAtesting";
-        String email ="qatesting@mail.com";
+        String text = "WQAtesting";
+        String email ="Wqatesting@mail.com";
         Faker faker = new Faker();
 
 
@@ -50,7 +50,7 @@ public class AdministrationSteps {
             Thread.sleep(5000);
             administrationPage.deleteUser.click();
             Thread.sleep(2000);
-            Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains(email));
+            Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains("@mail.com"));
             Thread.sleep(2000);
             administrationPage.confirmDelete.click();
         }
@@ -114,7 +114,7 @@ public class AdministrationSteps {
             administrationPage.userSelect24.click();
             Thread.sleep(4000);
             administrationPage.getOutOfDropdown.click();
-            administrationPage.getOutOfDropdown.click();
+            //administrationPage.getOutOfDropdown.click();
             Thread.sleep(2000);
             administrationPage.submitBtn.click();
             Thread.sleep(4000);

@@ -21,6 +21,7 @@ public class DomainSteps {
             Assert.assertTrue(domainPage.demographicsTab1.isDisplayed());
             Assert.assertTrue(domainPage.demographicsTab2.isDisplayed());
             Assert.assertTrue(domainPage.demographicsTab3.isDisplayed());
+            Thread.sleep(1000);
             Assert.assertTrue(domainPage.demographicsTab4.isDisplayed());
             Assert.assertTrue(domainPage.demographicsTab5.isDisplayed());
             Assert.assertTrue(domainPage.demographicsTab6.isDisplayed());
@@ -31,6 +32,7 @@ public class DomainSteps {
         else if(dropdowns.equals("Custom facet")) {
             galileoPage.customfacetBtn.click();
             Assert.assertTrue(domainPage.customFacetTab1.isDisplayed());
+            Thread.sleep(1000);
             Assert.assertTrue(domainPage.customFacetTab2.isDisplayed());
             Assert.assertTrue(domainPage.customFacetTab3.isDisplayed());
 
@@ -70,7 +72,7 @@ public class DomainSteps {
         }
 
         else if(dropdowns.equals("Medications")){
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             domainPage.medicationsDropdown.click();
 
 //            Assert.assertTrue(domainPage.medicationsTab1.isDisplayed());
@@ -80,7 +82,7 @@ public class DomainSteps {
         }
 
         else if(dropdowns.equals("Procedures")){
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             domainPage.proceduresDropdown.click();
 
 //            Assert.assertTrue(domainPage.proceduresTab1.isDisplayed());

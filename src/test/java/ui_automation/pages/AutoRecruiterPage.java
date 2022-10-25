@@ -15,7 +15,7 @@ public class AutoRecruiterPage {
     }
 
 
-    @FindBy(xpath = "//button[@class='el-button manage-btn el-button--primary is-plain is-round']")
+    @FindBy(xpath = "//*[text()='Trial Management ']/*")
     public WebElement trialManagementBtn;
 
     @FindBy(xpath = "//span[contains(text(),'Add new trial')]")
@@ -87,13 +87,13 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "//span[text()='Submit']")
     public WebElement submitBtn;
 
-    @FindBy(xpath = "(//button[@class='el-button el-button--danger el-button--mini']//span[text()='Delete'])[7]")
+    @FindBy(xpath = "(//span[text()=' Delete '])[15]")
     public WebElement deleteBtn;
 
     @FindBy(xpath = "//span[contains(text(),'OK')]")
     public WebElement okDeleteBtn;
 
-    @FindBy(xpath = "//span[@class='link__text'][text()='Auto Recruiter']")
+    @FindBy(xpath = "//span[@class=\"link__text\"][text()=\"AutoRecruiter\"]")
     public WebElement autoRecruiterFromNavigationbar;
 
         @FindBy(xpath = "//div[@class='el-card__body']")
@@ -111,7 +111,7 @@ public class AutoRecruiterPage {
     @FindBy(xpath = "//span[text()='Inactive patient list']")
     public WebElement inactivePatientListBtn;
 
-    @FindBy(xpath = "//h1[text()='Inactive Patients']")
+    @FindBy(xpath = "//h1[text()=' Inactive Patients ']")
     public WebElement inactivePatientsText;
 
     @FindBy(xpath = "//div[@class='el-card__body']//tr[5]//td[2]")
