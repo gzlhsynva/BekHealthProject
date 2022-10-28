@@ -66,7 +66,7 @@ public class AdministrationPage {
     @FindBy(xpath = "(//span[@class='el-radio__inner'])[3]")
     public WebElement PHIaccessChanger;
 
-    @FindBy(xpath = "(//span[text()=' Delete '])[50]")
+    @FindBy(xpath = "(//span[text()=' Delete '])[51]")
     public WebElement deleteUser;
 
     @FindBy(xpath = "//span[contains(text(),'Confirm')]")

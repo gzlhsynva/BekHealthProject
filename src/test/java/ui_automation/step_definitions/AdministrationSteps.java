@@ -50,8 +50,8 @@ public class AdministrationSteps {
             Thread.sleep(5000);
             administrationPage.deleteUser.click();
             Thread.sleep(2000);
-            Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains("@mail.com"));
-            Thread.sleep(2000);
+            Assert.assertTrue(administrationPage.deleteTextConfirm.getText().contains("testing"));
+            Thread.sleep(4000);
             administrationPage.confirmDelete.click();
         }
         else if(subtabs.equals("Site Registration")){

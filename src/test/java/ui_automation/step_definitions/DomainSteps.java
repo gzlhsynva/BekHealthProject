@@ -39,6 +39,7 @@ public class DomainSteps {
         }
 
         else if(dropdowns.equals("Observations & Vital Signs")){
+            Thread.sleep(2000);
             domainPage.observationsVitalDropdown.click();
 //            Assert.assertTrue(domainPage.observationsVitalTab1.isDisplayed());
 //            Assert.assertTrue(domainPage.observationsVitalTab2.isDisplayed());
