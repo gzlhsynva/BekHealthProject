@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         tags="@administration1",
         dryRun = false
         //monochrome = true
-//test2
+//testforBitbucket
 )
 
 
